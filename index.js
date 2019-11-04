@@ -11,7 +11,7 @@ module.exports = function BossHelper(mod) {
 		bossHunting = 0,
 		bossTemplate = 0
 	
-	mod.command.add(["boss", "怪物"], (arg) => {
+	mod.command.add(["boss", "monster"], (arg) => {
 		if (!arg) {
 			mod.settings.enabled = !mod.settings.enabled
 			MSG.chat("Boss-Helper: " + (mod.settings.enabled ? MSG.BLU("On") : MSG.YEL("Off")))
@@ -22,29 +22,29 @@ module.exports = function BossHelper(mod) {
 			}
 		} else {
 			switch (arg) {
-				case "警告":
+				case "warn":
 					mod.settings.alerted = !mod.settings.alerted
-					MSG.chat("警告消息 " + (mod.settings.alerted ? MSG.BLU("启用") : MSG.YEL("禁用")))
+					MSG.chat("Warning message " + (mod.settings.alerted ? MSG.BLU("Enable") : MSG.YEL("Disable")))
 					break
-				case "通知":
+				case "notice":
 					mod.settings.notice = !mod.settings.notice
-					MSG.chat("通知消息 " + (mod.settings.notice ? MSG.BLU("启用") : MSG.YEL("禁用")))
+					MSG.chat("Notification message " + (mod.settings.notice ? MSG.BLU("Enable") : MSG.YEL("Disable")))
 					break
-				case "消息":
+				case "message":
 					mod.settings.messager = !mod.settings.messager
-					MSG.chat("消息记录 " + (mod.settings.messager ? MSG.BLU("启用") : MSG.YEL("禁用")))
+					MSG.chat("Message record " + (mod.settings.messager ? MSG.BLU("Enable") : MSG.YEL("Disable")))
 					break
-				case "标记":
+				case "mark":
 					mod.settings.marker = !mod.settings.marker
-					MSG.chat("标记位置 " + (mod.settings.marker ? MSG.BLU("启用") : MSG.YEL("禁用")))
+					MSG.chat("Mark position " + (mod.settings.marker ? MSG.BLU("Enable") : MSG.YEL("Disable")))
 					break
-				case "清除":
-					MSG.chat("Boss-Helper " + TIP("清除怪物标记"))
+				case "Clear":
+					MSG.chat("Boss-Helper " + TIP("Clear monster mark"))
 					for (let i of mobid) {
 						despawnItem(i)
 					}
 					break
-				case "查询":
+				case "ask":
 					MSG.chat("------------ 世界BOSS ------------")
 					for (const i of mod.settings.bosses) {
 						if (i.logTime == undefined) continue
@@ -52,11 +52,11 @@ module.exports = function BossHelper(mod) {
 						
 						var nextTime = i.logTime + 5*60*60*1000
 						if (i.logTime == 0) {
-							MSG.chat(MSG.RED(i.name) + MSG.YEL(" 暂无记录"))
+							MSG.chat(MSG.RED(i.name) + MSG.YEL(" No records"))
 						} else if (Date.now() < nextTime) {
-							MSG.chat(MSG.RED(i.name) + " 下次刷新 " + MSG.TIP(getTime(nextTime)))
+							MSG.chat(MSG.RED(i.name) + " Next refresh " + MSG.TIP(getTime(nextTime)))
 						} else {
-							MSG.chat(MSG.RED(i.name) + " 上次记录 " + MSG.GRY(getTime(nextTime)))
+							MSG.chat(MSG.RED(i.name) + " Last record " + MSG.GRY(getTime(nextTime)))
 						}
 					}
 					// break
@@ -77,7 +77,7 @@ module.exports = function BossHelper(mod) {
 					}
 					break
 				default:
-					MSG.chat("Boss-Helper " + MSG.RED("参数错误!"))
+					MSG.chat("Boss-Helper " + MSG.RED("Parameter error!"))
 					break
 			}
 		}
@@ -162,8 +162,8 @@ module.exports = function BossHelper(mod) {
 				getBossMsg(sysMsg.tokens.npcName)
 				whichBoss(bossHunting, bossTemplate)
 				if (boss) {
-					MSG.chat(MSG.BLU("已刷新 ") + MSG.RED(boss.name))
-					notificationafk("刷新 " + boss.name)
+					MSG.chat(MSG.BLU("Refreshed ") + MSG.RED(boss.name))
+					notificationafk("Refresh " + boss.name)
 				}
 				break
 			case 'SMT_FIELDBOSS_DIE_GUILD':
@@ -172,7 +172,7 @@ module.exports = function BossHelper(mod) {
 				whichBoss(bossHunting, bossTemplate)
 				if (boss) {
 					var nextTime = Date.now() + 5*60*60*1000
-					MSG.chat(MSG.RED(boss.name) + " 下次刷新 " + MSG.TIP(getTime(nextTime)))
+					MSG.chat(MSG.RED(boss.name) + " Next update " + MSG.TIP(getTime(nextTime)))
 					saveTime()
 				}
 				break
@@ -182,11 +182,11 @@ module.exports = function BossHelper(mod) {
 				whichBoss(bossHunting, bossTemplate)
 				if (boss) {
 					if ([1276, 1284].includes(bossTemplate)) {
-						MSG.party("已刷新 " + boss.name)
+						MSG.party("Refreshed " + boss.name)
 					} else {
-						MSG.chat(MSG.BLU("已刷新 ") + MSG.PIK(boss.name))
+						MSG.chat(MSG.BLU("Refreshed ") + MSG.PIK(boss.name))
 					}
-					notificationafk("刷新 " + boss.name)
+					notificationafk("Update " + boss.name)
 					saveTime()
 				}
 				break
@@ -279,7 +279,7 @@ module.exports = function BossHelper(mod) {
 		if (gage_info.curHp * 100n / gage_info.maxHp > boss_hp_stage) {
 			gage_info.curHp = gage_info.maxHp * boss_hp_stage / 100n;
 			update_hp();
-			mod.command.message('修正BOSS血量为 <font color="#E69F00">' + String(boss_hp_stage) + '</font>%');
+			mod.command.message('Correct BOSS blood to <font color="#E69F00">' + String(boss_hp_stage) + '</font>%');
 		}
 	}
 	
@@ -288,13 +288,13 @@ module.exports = function BossHelper(mod) {
 		gage_info.curHp = gage_info.maxHp;
 		correct_hp(e.hpLevel);
 		if (e.mode) {
-			mod.command.message('你错过了 ~ <font color="#E69F00">' + Math.round((99999999 - e.remainingEnrageTime)/1000) + '</font> 秒的战斗');
+			mod.command.message('You missed it ~ <font color="#E69F00">' + Math.round((99999999 - e.remainingEnrageTime)/1000) + '</font> 秒的战斗');
 		}
 		
 		if (e.hpLevel == 5) {
-			mod.command.message("BOSS血量为: 100%, 没人碰过它");
+			mod.command.message("BOSS HP: 100%, 没人碰过它");
 		} else if (e.hpLevel == 0) {
-			mod.command.message('BOSS血量低于 <font color="#FF0000">20%</font> !!!');
+			mod.command.message('BOSS HP is lower than <font color="#FF0000">20%</font> !!!');
 		}
 		
 		if (!hooks.length) {
