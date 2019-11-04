@@ -11,7 +11,7 @@ const DefaultSettings = {
         {huntingZoneId: 1023, templateId: 88888888, name: "(Event)Treasure Chest"},
         {huntingZoneId: 1023, templateId: 88888889, name: "(Event)Treasure Chest"},
         {huntingZoneId: 1023, templateId:   160341, name: "(Event)Sante Glaus"},
-        {huntingZoneId: 1023, templateId: 99999997, name: "(Event)貪心鬼聖誕老人"},
+        {huntingZoneId: 1023, templateId: 99999997, name: "(Event)Fat Santa"},
         {huntingZoneId: 1023, templateId: 99999998, name: "(Event)小氣鬼聖誕老人"},
         {huntingZoneId: 1023, templateId: 99999991, name: "(Event)偷蛋賊西奴斯"},
         {huntingZoneId: 1023, templateId: 99999992, name: "(Event)偷蛋賊西奴斯"},
