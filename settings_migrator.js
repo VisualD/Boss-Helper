@@ -6,17 +6,17 @@ const DefaultSettings = {
     "marker":   true, // 光柱提示物标记
     "itemId":  98260, // 古龍貝勒古斯的頭
     "bosses": [
-        {huntingZoneId: 1023, templateId:     3000, name: "(活動)杜利溫的幻影"},
-        {huntingZoneId: 1023, templateId: 20150805, name: "(活動)杜利溫的幻影"},
-        {huntingZoneId: 1023, templateId: 88888888, name: "(活動)寶物箱"},
-        {huntingZoneId: 1023, templateId: 88888889, name: "(活動)寶物箱"},
-        {huntingZoneId: 1023, templateId:   160341, name: "(活動)聖誕老人"},
-        {huntingZoneId: 1023, templateId: 99999997, name: "(活動)貪心鬼聖誕老人"},
-        {huntingZoneId: 1023, templateId: 99999998, name: "(活動)小氣鬼聖誕老人"},
-        {huntingZoneId: 1023, templateId: 99999991, name: "(活動)偷蛋賊西奴斯"},
-        {huntingZoneId: 1023, templateId: 99999992, name: "(活動)偷蛋賊西奴斯"},
-        {huntingZoneId: 1023, templateId: 99999999, name: "(活動)偷蛋賊西奴斯"},
-        {huntingZoneId:  183, templateId:     6002, name: "(活動)空投"},
+        {huntingZoneId: 1023, templateId:     3000, name: "(Event)Dakuryon's Shade"},
+        {huntingZoneId: 1023, templateId: 20150805, name: "(Event)Dakuryon's Shade"},
+        {huntingZoneId: 1023, templateId: 88888888, name: "(Event)Treasure Chest"},
+        {huntingZoneId: 1023, templateId: 88888889, name: "(Event)Treasure Chest"},
+        {huntingZoneId: 1023, templateId:   160341, name: "(Event)Sante Glaus"},
+        {huntingZoneId: 1023, templateId: 99999997, name: "(Event)貪心鬼聖誕老人"},
+        {huntingZoneId: 1023, templateId: 99999998, name: "(Event)小氣鬼聖誕老人"},
+        {huntingZoneId: 1023, templateId: 99999991, name: "(Event)偷蛋賊西奴斯"},
+        {huntingZoneId: 1023, templateId: 99999992, name: "(Event)偷蛋賊西奴斯"},
+        {huntingZoneId: 1023, templateId: 99999999, name: "(Event)偷蛋賊西奴斯"},
+        {huntingZoneId:  183, templateId:     6002, name: "(Event)空投"},
 /* ==== 亚伦南部 ======================================================================================== */
         {huntingZoneId:   2, templateId: 1271, name: "[阿卡尼亞領地]阿勒坤(西部砍伐區)"},
         {huntingZoneId:   3, templateId: 1271, name: "[阿卡尼亞領地]阿勒坤(遺忘森林)"},
