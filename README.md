@@ -1,7 +1,7 @@
-Boss-Helper 怪物提示
+Boss-Helper Tutorial
 ======
 
-# 功能简介
+# Information about mod
 
 指定NPC(怪物/世界王/流浪商人)在可视范围内出现时, 发送对应文字提示, 并标记位置
 
