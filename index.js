@@ -28,7 +28,7 @@ module.exports = function BossHelper(mod) {
 					break
 				case "notice":
 					mod.settings.notice = !mod.settings.notice
-					MSG.chat("Notification message " + (mod.settings.notice ? MSG.BLU("Enable") : MSG.YEL("Disable")))
+					MSG.chat("Сообщение уведомления " + (mod.settings.notice ? MSG.BLU("Enable") : MSG.YEL("Disable")))
 					break
 				case "message":
 					mod.settings.messager = !mod.settings.messager
