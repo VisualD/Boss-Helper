@@ -3,11 +3,11 @@ Boss-Helper Tutorial
 
 # Information about mod
 
-指定NPC(怪物/世界王/流浪商人)在可视范围内出现时, 发送对应文字提示, 并标记位置
+Когда указанный NPC (Monster/ World Boss / Wandering Merchant) появится в видимом диапазоне, отправьте соответствующую команду в чат /toolbox и отметьте местоположение.
 
 ------
 
-/8频道 键入命令 | 效果说明
+/toolbox | Описание команды
 --- | ---
 怪物 | 开启/关闭模组 (默认开启)
 怪物 警告 | 在屏幕上警告通知消息
@@ -19,23 +19,21 @@ Boss-Helper Tutorial
 
 ------
 
-- 更多怪物查询: https://github.com/neowutran/TeraDpsMeterData/tree/master/monsters/  monsters-TW.xml
-
-- 编辑 config.json 自定义项目
+- Отредактируйте config.json для удобства
 
 ------
 
-- 已增加 Owyn作者的 [field-boss_time](https://github.com/Owyn/field-boss_time) 模组功能, 三大世界王 刷新时间跟踪记录功能
+- Добавлена функция модуля field-boss_time автора Owyn, для отслеживания времени респа трех мировых боссов.
 
-- 已增加 Lambda11作者的 [bam-hp-bar](https://github.com/Lambda11/bam-hp-bar) 模组功能, 血量显示功能
+- Добавлена функция модуля bam-hp-bar автора Lambda11, функция отображения объема HP
 
-- 已增加 全地图领地[流浪商人][神秘商店][交付哥布林]NPC
+- Добавлена полная территория карты остлеживания NPC [Странствующий торговец], [Тайный магазин], [Гоблин Доставщик]
 
-- 已增加 四主城[交付哥布林]NPC 刷新时间跟踪记录功能
+- Добавлено четыре главных города с NPC [Гоблин Доставщик]. Добавлена функция записи отслеживания времени обновления NPC
 
 ![screenshot](https://github.com/tera-mod/Boss-Helper/blob/master/screenshot/05.png)
 
-- 已增加 Seren作者的 [tera-notifier](https://github.com/SerenTera/tera-notifier) 模组功能, 挂机也能收到[电脑系统]发出的消息提醒
+- Была добавлена функция модуля tera-notifier автора Seren, и свернутом окне может также получать уведомления из [компьютерной системы].
 
 ![screenshot](https://github.com/tera-mod/Boss-Helper/blob/master/screenshot/06.png)
 
